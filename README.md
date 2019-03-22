@@ -13,14 +13,14 @@
 
 ## Install
 ```shell
-npm install zloading -S
+npm install z-loading -S
 ```
 
 ## Quick Start
 ``` javascript
 import Vue from 'vue';
-import zloading from 'zloading';
-import 'zloading/zloading.css';
+import zloading from 'z-loading';
+import 'zloading/z-loading.css';
 
 Vue.use(zloading);
 
