@@ -10,7 +10,7 @@
           <li class="media">
             <div class="media-body">
               <h4 class="media-heading">setConfig</h4>
-              Set the global loading configuration
+              __("Set the global loading configuration")
               <div class="code-block">
                 <code>
                   import { setConfig } from 'zLoading';
@@ -34,14 +34,14 @@
           type="submit"
           @click="setGlobalConfig"
           class="btn btn-default"
-        >Set Global Config</button>
+        >__("Set Global Config")</button>
         
         <transition name="fade">
           <div class="well well-lg" v-if="code">
           <textarea class="code-textarea" rows="10" v-model="code">
           </textarea>
           <div class="hide-code">
-            <button @click="code = ''" type="button" class="btn btn-link glyphicon glyphicon-arrow-up">Hide</button>
+            <button @click="code = ''" type="button" class="btn btn-link glyphicon glyphicon-arrow-up">__("Hide")</button>
           </div>
           </div>
         </transition>

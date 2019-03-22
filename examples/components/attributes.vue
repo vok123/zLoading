@@ -3,7 +3,7 @@
     <a name="attributes"></a>
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Attributes</h3>
+        <h3 class="panel-title">__("Attributes")</h3>
       </div>
       <div class="panel-body">
         <form @submit.prevent>
@@ -21,7 +21,7 @@
             <label>
               <input type="radio" v-model="params.type" value="doubleBounce"> doubleBounce
             </label>
-            <p class="help-block">Loading type ( Default: youtubeBar )</p>
+            <p class="help-block">__("Loading type") ( __("Default"): youtubeBar )</p>
           </div>
           <div class="form-group">
             <label for="timeout">timeOut</label>
@@ -32,7 +32,7 @@
               class="form-control"
               placeholder="timeOut"
             >
-            <p class="help-block">Timeout, Greater than 0 automatically turns on timeout off.( Default: 0 )</p>
+            <p class="help-block">__("timeout off").( __("Default"): 0 )</p>
           </div>
           <div class="form-group" v-if="params.type !== 'youtubeBar'">
             <label for="size">size</label>
@@ -43,7 +43,7 @@
               class="form-control"
               placeholder="spinner size"
             >
-            <p class="help-block">Spinner size. (Default: 50px)</p>
+            <p class="help-block">__("Spinner size"). (__("Default"): 50px)</p>
           </div>
           <template v-else>
             <div class="form-group">
@@ -55,7 +55,7 @@
                 class="form-control"
                 placeholder="height"
               >
-              <p class="help-block">Youtube bar height ( Default: 2px )</p>
+              <p class="help-block">Youtube bar __("height") ( __("Default"): 2px )</p>
             </div>
             <div class="form-group">
               <label>barWidth</label>
@@ -68,7 +68,7 @@
                 >
                 </div>
               </div>
-              <p class="help-block">Youtube bar start width ( Default: 0 ).</p>
+              <p class="help-block">Youtube bar __("start width") ( __("Default"): 0 ).</p>
             </div>
             <div class="radio">
               <label>position</label>
@@ -78,7 +78,7 @@
               <label>
                 <input type="radio" v-model="params.position" value="bottom"> bottom
               </label>
-              <p class="help-block">(Default: top)</p>
+              <p class="help-block">(__("Default"): top)</p>
             </div>
           </template>
           
@@ -115,7 +115,7 @@
             type="submit"
             @click="setConfig"
             class="btn btn-default"
-          >Submit (Set Global Config)</button>
+          >Submit (__("Set Global Config"))</button>
           <button
             type="submit"
             @click="submit"
@@ -128,7 +128,7 @@
           <textarea class="code-textarea" rows="20" v-model="code">
           </textarea>
           <div class="hide-code">
-            <button @click="code = ''" type="button" class="btn btn-link glyphicon glyphicon-arrow-up">Hide</button>
+            <button @click="code = ''" type="button" class="btn btn-link glyphicon glyphicon-arrow-up">__("Hide")</button>
           </div>
           </div>
         </transition>

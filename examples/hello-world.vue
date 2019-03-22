@@ -1,10 +1,41 @@
 <template>
   <div class="hello-world-box">
-    <youtube-bar />
-    <attributes />
-    <api />
-    <methods />
-    <directive />
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" target="_blank" href="https://github.com/vok123/zLoading/tree/dev">
+            <img alt="zloading" src="./assets/img/logo.png">
+          </a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#attributes">__("Attributes")</a></li>
+            <li><a href="#api">Api</a></li>
+            <li><a href="#methods">__("Methods")</a></li>
+            <li><a href="#directive">__("Directive")</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">GitHub</a></li>
+            <li class="dropdown">
+              <a href="javascript:;" class="dropdown-toggle">{{ langArr[lang] }}<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li v-for="(lang, key) in langArr" @click="to(key)" :key="key"><a href="javascript:;">{{ lang }}</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <transition name="fade">
+      <div v-if="visible" class="content">
+        <youtube-bar />
+        <attributes />
+        <api />
+        <methods />
+        <directive />
+      </div>
+    </transition>
+    <a href="#" class="to-top glyphicon glyphicon-chevron-up"></a>
   </div>
 </template>
 
@@ -21,6 +52,28 @@ export default {
     methods,
     directive,
     api
+  },
+  data () {
+    return {
+      visible: false,
+      langArr: {
+        cn: '__("Chinese")',
+        en: 'English'
+      },
+      lang: ''
+    };
+  },
+  methods: {
+    to (type) {
+      this.lang = type;
+      window.location.href = '/zLoading/static/' + type;
+    }
+  },
+  mounted () {
+    this.lang = window.location.href.indexOf('static/cn') > -1 ? 'cn' : 'en';
+    this.$zLoading.open({ barWidth: 0.1 }).close(1100).done(() => {
+      this.visible = true;
+    });
   }
 };
 </script>
@@ -29,12 +82,22 @@ export default {
 <style lang="scss">
 
 .hello-world-box {
-  width: 1280px;
-  margin: 80px auto;
   .panel {
     margin-top: 30px;
   }
-  
+  .content {
+    width: 1280px;
+    margin: 80px auto;
+  }
+  .dropdown:hover {
+    .dropdown-menu {
+      display: block;
+    }
+  }
+  .dropdown-menu li a {
+    padding: 10px 0;
+    text-align: center;
+  }
   .code-textarea {
     border: none;
     color: #7278bf;

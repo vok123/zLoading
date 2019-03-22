@@ -1,6 +1,7 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin'),
   FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin'),
   HtmlWebpackPlugin = require('html-webpack-plugin'),
+  WebpackI18n = require('wp-i18n-plugin'),
   MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = (isProduction = false) => ({
@@ -48,8 +49,8 @@ module.exports = (isProduction = false) => ({
           {
             loader: 'url-loader',
             options: {
-              limit: 1024 * 90,
-              name: 'img/[name].[hash:3].[ext]'
+              limit: 1024 * 30,
+              name: 'img/[name].[ext]'
             }
           }
         ]
@@ -60,7 +61,7 @@ module.exports = (isProduction = false) => ({
           {
             loader: 'file-loader',
             options: {
-              name: 'img/[name].[hash:3].[ext]'
+              name: 'img/[name].[ext]'
             }
           }
         ]
@@ -104,6 +105,22 @@ module.exports = (isProduction = false) => ({
     new FriendlyErrorsWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './examples/index.html'
+    }),
+    // 多语言处理插件
+    new WebpackI18n.Plugin({
+      sourcePath: require('path').join(__dirname, '..', 'examples/lang/config.json'),
+      // 自动新增i18n对象语言列表
+      languageList: ['cn', 'en'],
+      // 设置默认将对于key设置为cn的值
+      useLanguage: 'en',
+      // 是否根据内容自动生成对象
+      autoWriteAble: true,
+      // 格式化对象空格数
+      formatSpace: 2,
+      // 是否展示未翻译的项
+      showDetail: false,
+      // 自动移除无用的key
+      removeUnUseKeys: false
     })
   ],
   entry: './examples/index.js',

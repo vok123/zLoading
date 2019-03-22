@@ -19,6 +19,7 @@
     "babel-loader": "^8.0.5",
     "babel-preset-vue": "^2.0.2",
     "clean-webpack-plugin": "^2.0.1",
+    "copy-webpack-plugin": "^5.0.1",
     "css-loader": "^2.1.1",
     "eslint": "^5.15.1",
     "eslint-config-standard": "^11.0.0",
@@ -49,7 +50,8 @@
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.2.1",
-    "webpack-merge": "^4.2.1"
+    "webpack-merge": "^4.2.1",
+    "wp-i18n-plugin": "^1.0.4"
   },
   "dependencies": {
     "bootstrap-sass": "^3.4.1",

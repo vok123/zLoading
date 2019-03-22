@@ -1,21 +1,21 @@
 <template>
-  <div class="directive-box" v-zloading:stretch="isLoading">
+  <div class="directive-box" v-zLoading:stretch="isLoading">
     <a name="directive"></a>
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Directive (v-zloading)</h3>
+        <h3 class="panel-title">__("Directive") (v-zLoading)</h3>
       </div>
       <div class="panel-body">
         <ul class="media-list">
           <li class="media">
             <div class="media-body">
               <h4 class="media-heading">?arg (youtubeBar | circle | doubleBounce | stretch)</h4>
-              Load type
-              <p>Default: circle</p>
-              <p><a target="_blank" href="https://cn.vuejs.org/v2/guide/custom-directive.html#%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0">Instruction arg description</a></p>
+              __("Load type")
+              <p>__("Default"): circle</p>
+              <p><a target="_blank" href="https://cn.vuejs.org/v2/guide/custom-directive.html#%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0">__("Instruction arg description")</a></p>
               <div class="code-block">
                 <code>
-                  v-zloading:circle="isLoading"
+                  v-zLoading:circle="isLoading"
                 </code>
               </div>
             </div>
@@ -23,27 +23,27 @@
           <li class="media">
             <div class="media-body">
               <h4 class="media-heading">?modifiers (fullscreen)</h4>
-              Whether full screen display
-              <p>Default: false</p>
-              <p><a target="_blank" href="https://cn.vuejs.org/v2/guide/custom-directive.html#%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0">Instruction modifiers description</a></p>
+              __("Whether full screen display")
+              <p>__("Default"): false</p>
+              <p><a target="_blank" href="https://cn.vuejs.org/v2/guide/custom-directive.html#%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0">__("Instruction modifiers description")</a></p>
               <div class="code-block">
                 <code>
-                  v-zloading.fullscreen="isLoading"
+                  v-zLoading.fullscreen="isLoading"
                 </code>
               </div>
             </div>
           </li>
         </ul>
         <button @click="clickHandle1" type="button" class="btn btn-success">Loading</button>
-        <transition name="fade">
-          <div class="well well-lg" v-if="code">
+        <!-- <transition name="fade">
+          <div class="well well-lg" v-if="1">
           <textarea class="code-textarea" rows="15" readonly v-model="code">
           </textarea>
           <div class="hide-code">
-            <button @click="code = ''" type="button" class="btn btn-link glyphicon glyphicon-arrow-up">Hide</button>
+            <button @click="code = ''" type="button" class="btn btn-link glyphicon glyphicon-arrow-up">__("Hide")</button>
           </div>
           </div>
-        </transition>
+        </transition> -->
       </div>
     </div>
   </div>
@@ -66,7 +66,7 @@ export default {
       this.code =
       `
       <template>
-        <div class="directive-box" v-zloading:stretch="isLoading">
+        <div class="directive-box" v-zLoading:stretch="isLoading">
           ...
           <button @click="clickHandle1" type="button" class="btn btn-success">Loading</button>
         </div>

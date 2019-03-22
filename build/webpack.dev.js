@@ -3,10 +3,11 @@ const merge = require('webpack-merge'),
 function resolve(dir) {
   return require('path').join(__dirname, '..', dir);
 }
-module.exports = merge(getBaseConfig(false), {
+let config = merge(getBaseConfig(false), {
   devtool: '#source-map',
+  name: 'en',
   output: {
-    path: '/',
+    path: resolve('/'),
     filename: '[name].js',
     publicPath: '/',
     chunkFilename: '[name].js'
@@ -25,3 +26,5 @@ module.exports = merge(getBaseConfig(false), {
     }
   }
 });
+
+module.exports = config;
