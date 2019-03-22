@@ -8,7 +8,7 @@ npm install z-loading -S
 ``` javascript
 import Vue from 'vue';
 import zloading from 'z-loading';
-import 'zloading/z-loading.css';
+import 'z-loading/dist/z-loading.css';
 
 Vue.use(zloading);
 
