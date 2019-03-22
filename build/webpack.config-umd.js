@@ -10,6 +10,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin'),
 function resolve(dir) {
   return require('path').join(__dirname, '..', dir);
 }
+
 module.exports = {
   mode: 'production',
   devtool: '#source-map',
@@ -196,7 +197,29 @@ module.exports = {
       }
     ),
     new HashedModuleIdsPlugin(),
-    new NamedChunksPlugin()
+    new NamedChunksPlugin(),
+    {
+      apply (compiler) {
+        compiler.hooks.emit.tapAsync('npm-package', (compilation, callback) => {
+          let json = require('fs').readFileSync(resolve('./package.json'), { encoding: 'UTF-8' });
+          json = JSON.parse(json);
+          ['devDependencies', 'dependencies', 'scripts'].map(key => (delete json[key]));
+          const extendData = {
+            main: 'dist/z-loading.js',
+            style: 'dist/z-loading.css'
+          };
+          Object.keys(extendData).map(key => {
+            json[key] = extendData[key];
+          });
+          let jsonStr = JSON.stringify(json, null, 2);
+          compilation.assets['package.json'] = {
+            source: () => jsonStr,
+            size: () => jsonStr.length
+          };
+          callback();
+        });
+      }
+    }
     // new HtmlWebpackPlugin(
     //   {
     //     templateParameters: function () { /* omitted long function */ },

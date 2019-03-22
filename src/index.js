@@ -158,7 +158,7 @@ const install = Vue => {
   };
   window.ZLoading = Vue.prototype.$zLoading = _loading;
   // Vue directive
-  Vue.directive('zloading', (el, { value, oldValue, modifiers, arg = 'circle' }) => {
+  Vue.directive('zLoading', (el, { value, oldValue, modifiers, arg = 'circle' }) => {
     if (value === oldValue) return;
     let target = el;
     if (modifiers.fullscreen === true) {

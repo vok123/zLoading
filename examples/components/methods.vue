@@ -3,14 +3,14 @@
     <a name="methods"></a>
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Methods</h3>
+        <h3 class="panel-title">__("Methods")</h3>
       </div>
       <div class="panel-body">
         <ul class="media-list">
           <li class="media">
             <div class="media-body">
               <h4 class="media-heading">.open(?Attributes: object)</h4>
-              Display loading 
+              __("Display loading")
               <div class="code-block">
                 <code>
                   this.$zLoading.open();
@@ -21,7 +21,7 @@
           <li class="media">
             <div class="media-body">
               <h4 class="media-heading">.close(?timeout: number)</h4>
-              Hidden loading
+              __("Hidden loading")
               <div class="code-block">
                 <code>
                   this.$zLoading.close();
@@ -32,7 +32,7 @@
           <li class="media">
             <div class="media-body">
               <h4 class="media-heading">.wait(task: Promise)</h4>
-              Automatically manage loading status, Automatically close loading when Promise resolve or reject.
+              __("Automatically manage loading status, Automatically close loading when Promise resolve or reject").
               <div class="code-block">
                 <code>
                   // Promise<br />
@@ -46,7 +46,7 @@
           <li class="media">
             <div class="media-body">
               <h4 class="media-heading">.done(callback: function)</h4>
-              Callback when loading disappears
+              __("Callback when loading disappears")
               <div class="code-block">
                 <code>
                   this.$zLoading.open().done(() => { Do something });
@@ -56,15 +56,15 @@
           </li>
           <li class="media">
             <div class="media-body">
-              <h4 class="media-heading">Chained calls</h4>
-              Display Loading and set the 5 second timeout and close the callback.
+              <h4 class="media-heading">__("Chained calls")</h4>
+              __("Display Loading and set the 5 second timeout and close the callback.")
               <div class="code-block">
                 <code>
                   this.$zLoading<br />
-                  .open() // Display loading <br />
-                  .close(5000) // Set the 5 second timeout <br />
-                  .done(() => { Do something }) // Set close callback<br />
-                  .wait(promiseTask) // Task hosting;
+                  .open() // __("Display loading") <br />
+                  .close(5000) // __("Set the 5 second timeout") <br />
+                  .done(() => { Do something }) // __("Set close callback")<br />
+                  .wait(promiseTask) // __("Task hosting");
                 </code>
               </div>
             </div>
