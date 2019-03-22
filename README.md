@@ -4,6 +4,13 @@
   <h2>Vue 2.x component for loading indicator</h2>
 </div>
 
+## Gif display
+<div  align="center">
+  <img src="./static/gif/bar.gif" alt="zloading-gif" align=center/>
+
+  <img src="./static/gif/loading.gif" alt="zloading-gif" align=center/>
+</div>
+
 ## Install
 ```shell
 npm install zloading -S
