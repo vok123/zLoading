@@ -4,16 +4,23 @@
   <h2>Vue 2.x component for loading indicator</h2>
 </div>
 
+## Gif display
+<div  align="center">
+  <img src="./static/gif/bar.gif" alt="zloading-gif" align=center/>
+
+  <img src="./static/gif/loading.gif" alt="zloading-gif" align=center/>
+</div>
+
 ## Install
 ```shell
-npm install zloading -S
+npm install z-loading -S
 ```
 
 ## Quick Start
 ``` javascript
 import Vue from 'vue';
-import zloading from 'zloading';
-import 'zloading/zloading.css';
+import zloading from 'z-loading';
+import 'z-loading/dist/z-loading.css';
 
 Vue.use(zloading);
 
