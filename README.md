@@ -1,15 +1,3 @@
-<div  align="center">
-  <img src="./examples/assets/img/logo.png" width = "100" height = "100" alt="zloading" align=center/>
-  <h1>zLoading</h1>
-  <h2>Vue 2.x component for loading indicator</h2>
-</div>
-
-## Gif display
-<div  align="center">
-  <img src="./examples/assets/gif/bar.gif" alt="zloading-gif" align=center/>
-
-  <img src="./examples/assets/gif/loading.gif" alt="zloading-gif" align=center/>
-</div>
 
 ## Install
 ```shell
