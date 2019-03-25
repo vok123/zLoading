@@ -3,7 +3,7 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" target="_blank" href="https://github.com/vok123/zLoading/tree/dev">
+          <a class="navbar-brand" href="#">
             <img alt="zloading" src="./assets/img/logo.png">
           </a>
         </div>
@@ -15,7 +15,7 @@
             <li><a href="#directive">__("Directive")</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">GitHub</a></li>
+            <li><a target="_blank" href="https://github.com/vok123/zLoading/tree/dev">GitHub</a></li>
             <li class="dropdown">
               <a href="javascript:;" class="dropdown-toggle">{{ langArr[lang] }}<span class="caret"></span></a>
               <ul class="dropdown-menu">
