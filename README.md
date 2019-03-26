@@ -4,13 +4,6 @@
   <p>Vue 2.x component for loading indicator, youtubeBar | google Circle. (support mobile)</p>
 </div>
 
-## Gif display
-<div  align="center">
-  <img src="https://github.com/vok123/zLoading/blob/master/static/gif/bar.gif" alt="zloading-gif" align=center/>
-
-  <img src="https://github.com/vok123/zLoading/blob/master/static/gif/loading.gif" alt="zloading-gif" align=center/>
-</div>
-
 ## Install
 ```shell
 npm install z-loading -S
