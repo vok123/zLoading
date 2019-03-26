@@ -1,7 +1,7 @@
 {
   "name": "z-loading",
-  "version": "1.0.1",
-  "description": "Vue 2.x component for loading indicator",
+  "version": "1.0.2",
+  "description": "Vue 2.x component for loading indicator, youtubeBar | google Circle. (support mobile)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vok123/zLoading.git"
@@ -10,7 +10,10 @@
     "vue",
     "loading",
     "zloader",
-    "spinner"
+    "mobile spinner",
+    "youtube bar",
+    "google circle",
+    "mobile loading"
   ],
   "files": [
     "dist"
