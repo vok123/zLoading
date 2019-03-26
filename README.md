@@ -10,6 +10,7 @@
 
   <img src="https://github.com/vok123/zLoading/blob/master/static/gif/loading.gif" alt="zloading-gif" align=center/>
 </div>
+
 ## Install
 ```shell
 npm install z-loading -S
